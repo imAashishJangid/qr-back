@@ -18,6 +18,11 @@ const io = new Server(httpServer, {
 app.use(cors());
 app.use(express.json());
 
+
+app.get("/", (req, res) => {
+  res.json({ message: "Backend working 🚀" });
+});
+
 // Test route
 app.get('/api/test', (req, res) => {
   res.json({ 
